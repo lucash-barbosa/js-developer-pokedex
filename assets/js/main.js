@@ -17,7 +17,7 @@ function loadPokemon(id) {
     pokemonList.innerHTML = pokemonInfo;
     removeLoadMoreButton = true;
   });
- 
+ loadMoreButton.parentElement.removeChild(loadMoreButton)
 }
 
 
