@@ -6,7 +6,7 @@ const limit = 10
 let offset = 0;
 
 function clearListAndRestart (offset, limit) {
-  pokemonList.innerHTML = `<span> </span>`;
+  pokemonList.innerHTML = "";
   console.log("tets");
   loadPokemonItens(offset, limit);
 }
