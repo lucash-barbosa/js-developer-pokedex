@@ -15,6 +15,7 @@ function loadPokemon(event, id) {
       <img src="${pokemon.photo}" alt="${pokemon.name}">
     `;
     pokemonList.innerHTML = pokemonInfo;
+    console.log('rodou');
   });
 }
 
