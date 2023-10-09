@@ -1,7 +1,7 @@
 const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
 
-comst pagination = document.getElementsByClassName("pagination");
+const pagination = document.getElementsByClassName("pagination");
 
 const maxRecords = 151
 const limit = 10
