@@ -8,11 +8,9 @@ let offset = 0;
 
 function clearListAndRestart (offset, limit) {
   pokemonList.innerHTML = "";
-  pagination[0].innerHTML = `<div class="pagination">
-            <button id="loadMoreButton" type="button">
+  pagination[0].appendChild(`<button id="loadMoreButton" type="button">
                 Carregar mais
-            </button>
-        </div>`;
+            </button>`);
   loadPokemonItens(offset, limit);
 }
 
