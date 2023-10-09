@@ -15,7 +15,7 @@ function loadPokemon(id) {
       <img src="${pokemon.photo}" alt="${pokemon.name}">
     `;
     pokemonList.innerHTML = pokemonInfo;
-    loadMoreButton = true;
+    removeLoadMoreButton = true;
   });
  
 }
@@ -54,7 +54,7 @@ loadMoreButton.addEventListener('click', () => {
     offset += limit
     const qtdRecordsWithNexPage = offset + limit
 
-    if (qtdRecordsWithNexPage >= maxRecords || loadMoreButton) {
+    if (qtdRecordsWithNexPage >= maxRecords || removeLoadMoreButton) {
         const newLimit = maxRecords - offset
         loadPokemonItens(offset, newLimit)
 
