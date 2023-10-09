@@ -6,7 +6,6 @@ const limit = 10
 let offset = 0;
 
 function loadPokemon(event, id) {
-  event.preventDefault();
   pokeApi.getPokemonDetail({ url: `https://pokeapi.co/api/v2/pokemon/${id}/` }).then((pokemon) => {
     const pokemonInfo = `
       <p>Nome: ${pokemon.name}</p>
