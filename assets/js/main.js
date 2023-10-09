@@ -8,7 +8,8 @@ let offset = 0;
 function loadPokemon(id) {
   pokeApi.getPokemonDetail({ url: `https://pokeapi.co/api/v2/pokemon/${id}/` }).then((pokemon) => {
     const pokemonInfo = `
-    <span onclick="loadPokemonItens(${offset}, ${limit})">< voltar</span>
+    <span onclick="() => pokemonList.innerHTML = '';
+    loadPokemonItens(${offset}, ${limit});">< voltar</span>
       <p>Nome: ${pokemon.name}</p>
       <p>Número: ${pokemon.number}</p>
       <p>Tipo: ${pokemon.type}</p>
