@@ -5,9 +5,15 @@ const maxRecords = 151
 const limit = 10
 let offset = 0;
 
+function loadPokemon() {
+  pokemonInfo = "<p>test</p>"
+  
+  pokemonList.innerHTML = pokemonInfo;
+}
+
 function convertPokemonToLi(pokemon) {
     return `
-        <li class="pokemon ${pokemon.type}">
+        <li class="pokemon ${pokemon.type}" onclick="loadPokemon(pokemon.number)">
             <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
 
