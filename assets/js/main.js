@@ -1,7 +1,7 @@
 const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
 
-comst pagination = document.getElememtByClassName("pagination");
+comst pagination = document.getElementsByClassName("pagination");
 
 const maxRecords = 151
 const limit = 10
@@ -16,7 +16,6 @@ function loadPokemon(id) {
       <img src="${pokemon.photo}" alt="${pokemon.name}">
     `;
     pokemonList.innerHTML = pokemonInfo;
-    console.log('rodou');
   });
   pagination.innerHTML = "";
 }
