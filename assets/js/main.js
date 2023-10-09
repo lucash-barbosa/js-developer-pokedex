@@ -1,5 +1,6 @@
 const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
+const pagination = document.getElementsByClassName("pagination");
 
 const maxRecords = 151
 const limit = 10
@@ -9,6 +10,9 @@ function clearListAndRestart (offset, limit) {
   pokemonList.innerHTML = "";
   console.log("tets");
   loadPokemonItens(offset, limit);
+  pagination.appendChild(`<button id="loadMoreButton" type="button">
+                Carregar mais
+            </button>`)
 }
 
 function loadPokemon(id) {
