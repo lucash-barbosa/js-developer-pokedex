@@ -5,7 +5,8 @@ const maxRecords = 151
 const limit = 10
 let offset = 0;
 
-function loadPokemon() {
+function loadPokemon(event, id) {
+  event.preventDefault();
   pokemonInfo = "<p>test</p>"
   
   pokemonList.innerHTML = pokemonInfo;
