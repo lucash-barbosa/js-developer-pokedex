@@ -8,13 +8,12 @@ let offset = 0;
 
 function clearListAndRestart (offset, limit) {
   pokemonList.innerHTML = "";
-  console.log("tets");
-  loadPokemonItens(offset, limit);
   pagination.innerHTML = `<div class="pagination">
             <button id="loadMoreButton" type="button">
                 Carregar mais
             </button>
         </div>`
+  loadPokemonItens(offset, limit);
 }
 
 function loadPokemon(id) {
