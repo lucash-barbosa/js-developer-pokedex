@@ -22,7 +22,7 @@ function loadPokemon(event, id) {
 function convertPokemonToLi(pokemon) {
     return `
         <li class="pokemon ${pokemon.type}">
-        <button onclick="console.log("tets")">
+        <button onclick="console.log('tets')">
             <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
 
