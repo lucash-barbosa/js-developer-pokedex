@@ -10,9 +10,11 @@ function clearListAndRestart (offset, limit) {
   pokemonList.innerHTML = "";
   console.log("tets");
   loadPokemonItens(offset, limit);
-  pagination.appendChild(`<button id="loadMoreButton" type="button">
+  pagination.innerHTML = `<div class="pagination">
+            <button id="loadMoreButton" type="button">
                 Carregar mais
-            </button>`)
+            </button>
+        </div>`
 }
 
 function loadPokemon(id) {
