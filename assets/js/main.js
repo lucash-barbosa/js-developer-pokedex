@@ -17,7 +17,7 @@ function loadPokemon(id) {
     `;
     pokemonList.innerHTML = pokemonInfo;
   });
-  pagination.innerHTML = "";
+  pagination.innerHTML = " ";
 }
 
 
