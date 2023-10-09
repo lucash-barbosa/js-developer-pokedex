@@ -1,8 +1,7 @@
 const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
 
-const pagination = document.getElementsByClassName("pagination");
-
+let removeLoadMoreButton = false
 const maxRecords = 151
 const limit = 10
 let offset = 0;
@@ -16,8 +15,9 @@ function loadPokemon(id) {
       <img src="${pokemon.photo}" alt="${pokemon.name}">
     `;
     pokemonList.innerHTML = pokemonInfo;
+    loadMoreButton = true;
   });
-  pagination.innerHTML = " ";
+ 
 }
 
 
@@ -54,7 +54,7 @@ loadMoreButton.addEventListener('click', () => {
     offset += limit
     const qtdRecordsWithNexPage = offset + limit
 
-    if (qtdRecordsWithNexPage >= maxRecords) {
+    if (qtdRecordsWithNexPage >= maxRecords || loadMoreButton) {
         const newLimit = maxRecords - offset
         loadPokemonItens(offset, newLimit)
 
