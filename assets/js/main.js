@@ -12,7 +12,7 @@ function clearListAndRestart (offset, limit) {
             <button id="loadMoreButton" type="button">
                 Carregar mais
             </button>
-        </div>`
+        </div>`;
   loadPokemonItens(offset, limit);
 }
 
