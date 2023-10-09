@@ -7,10 +7,17 @@ let offset = 0;
 
 function loadPokemon(event, id) {
   event.preventDefault();
-  pokemonInfo = "<p>test</p>"
-  
-  pokemonList.innerHTML = pokemonInfo;
+  pokeApi.getPokemonDetail({ url: `https://pokeapi.co/api/v2/pokemon/${id}/` }).then((pokemon) => {
+    const pokemonInfo = `
+      <p>Nome: ${pokemon.name}</p>
+      <p>Número: ${pokemon.number}</p>
+      <p>Tipo: ${pokemon.type}</p>
+      <img src="${pokemon.photo}" alt="${pokemon.name}">
+    `;
+    pokemonList.innerHTML = pokemonInfo;
+  });
 }
+
 
 function convertPokemonToLi(pokemon) {
     return `
