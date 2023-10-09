@@ -5,10 +5,15 @@ const maxRecords = 151
 const limit = 10
 let offset = 0;
 
+function clearList () {
+  pokemonList.innerHTML = '';
+}
+
 function loadPokemon(id) {
   pokeApi.getPokemonDetail({ url: `https://pokeapi.co/api/v2/pokemon/${id}/` }).then((pokemon) => {
     const pokemonInfo = `
-    <span onclick="() => ${pokemonList.innerHTML} = '';
+    <span onclick="() =>
+    clearList;
     loadPokemonItens(${offset}, ${limit});">< voltar</span>
       <p>Nome: ${pokemon.name}</p>
       <p>Número: ${pokemon.number}</p>
